@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+
+  example-app:
+    build: ./
+    image: go-example
+    container_name: go-example
