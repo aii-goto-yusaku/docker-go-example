@@ -5,7 +5,7 @@ ARG prj="/go/src/github.com/aii-goto-yusaku/docker-go-example"
 RUN mkdir -p ${prj}
 WORKDIR ${prj}
 COPY . .
-RUN go build -o /app
+RUN CGO_ENABLED=0 go build -o /app
 
 # 実行
 FROM alpine:3 AS runtime
